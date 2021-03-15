@@ -1,6 +1,6 @@
 # Deploy to iTunes Connect with Pilot
 
-The new Deploy to iTunes Connect with Pilot step.
+The new Deploy to iTunes Connect with Pilot step..
 
 Deploy to iTunes Connect, using the
 fantastic [pilot](https://github.com/fastlane/fastlane/tree/master/pilot)
