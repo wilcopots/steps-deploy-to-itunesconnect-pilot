@@ -185,8 +185,8 @@ inputs:
     opts:
       title: "Pilot action"
       description: |-
-        Action to execute: build, distribute or upload
-      value_options: ["build", "distribute", "upload"]
+        Action to execute: upload or distribute
+      value_options: ["upload", "distribute"]
       is_required: true
   - skip_submission: "no"
     opts:

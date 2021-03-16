@@ -36,10 +36,10 @@ type Config struct {
 
 	AppID              string `env:"app_id"`
 	BundleID           string `env:"bundle_id"`
-	PilotAction        string `env:"pilot_action,opt[build,distrubute]"`
-	SkipSubmission     string `env:"skip_submission[yes,no]"`
+	PilotAction        string `env:"pilot_action,opt[upload,distribute]"`
+	SkipSubmission     string `env:"skip_submission,opt[yes,no]"`
 	Changelog          string `env:"changelog"`
-	DistributeExternal string `env:"distribute_external[yes,no]"`
+	DistributeExternal string `env:"distribute_external,opt[yes,no]"`
 	Groups             string `env:"groups"`
 	TeamID             string `env:"team_id"`
 	TeamName           string `env:"team_name"`
