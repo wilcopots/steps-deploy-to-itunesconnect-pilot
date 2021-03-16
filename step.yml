@@ -213,8 +213,7 @@ inputs:
     opts:
       title: "Groups"
       description: |-
-        Associate tester to one group or more by group name or
-        group id.
+        Associate tester to one group or more by group name or group id.
       is_required: true
   - gemfile_path: ./Gemfile
     opts:

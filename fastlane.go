@@ -82,11 +82,6 @@ func FastlaneAuthParams(authConfig appleauth.Credentials) (FastlaneParams, error
 			Key:   "--api_key_path",
 			Value: fastlaneAuthFile,
 		})
-		// deliver: "Precheck cannot check In-app purchases with the App Store Connect API Key (yet). Exclude In-app purchases from precheck"
-		args = append(args, Arg{
-			Key:   "--precheck_include_in_app_purchases",
-			Value: "false",
-		})
 	}
 
 	return FastlaneParams{Envs: envs, Args: args}, nil

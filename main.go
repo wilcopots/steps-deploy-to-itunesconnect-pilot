@@ -462,11 +462,15 @@ alphanumeric characters.`)
 		args = append(args, "--changelog", cfg.Changelog)
 	}
 
+	if cfg.DistributeExternal == "yes" {
+		args = append(args, "--distribute_external")
+	}
+
 	if cfg.Groups != "" {
 		args = append(args, "--groups", cfg.Groups)
 	}
 
-	args = append(args, "--platform", cfg.Platform)
+	args = append(args, "--app_platform", cfg.Platform)
 
 	args = append(args, options...)
 
