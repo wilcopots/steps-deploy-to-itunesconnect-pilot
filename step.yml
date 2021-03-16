@@ -1,8 +1,8 @@
-title: "Deploy to iTunes Connect"
-summary: Upload screenshots, metadata and binaries to [App Store Connect (iTunes Connect)](https://appstoreconnect.apple.com/) and submit your app for App Store review.
+title: "Deploy to iTunes Connect (with Pilot)"
+summary: Pilot makes it easier to manage your app on Apple’s TestFlight.
 description: |-
-  Upload screenshots, metadata and binaries to [App Store Connect (iTunes Connect)](https://appstoreconnect.apple.com/) and submit your app for App Store review,
-  using the fantastic [pilot](https://docs.fastlane.tools/actions/pilot/) fastlane action. You can upload iOS, macOS, or Apple TV apps with the Step.
+  Deploy & Distribute to TestFlight, using the Fastlane Pilot
+  (https://github.com/fastlane/fastlane/tree/master/pilot)
 
   This Step, however, does NOT build your binary: to create an IPA or PKG file, you need the right version of the **Xcode Archive** Step, or any other Step that is capable of building a binary file.
 
