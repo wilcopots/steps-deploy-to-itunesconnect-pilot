@@ -191,7 +191,7 @@ inputs:
   - skip_submission: "no"
     opts:
       title: "Skip submission?"
-      description: |
+      description: |-
         Skip the distributing action of pilot
         and only upload the ipa file
       value_options: ["yes", "no"]
@@ -199,20 +199,20 @@ inputs:
   - changelog: "See release notes"
     opts:
       title: "Changelog"
-      description: |
+      description: |-
         Provide the what's new text when uploading a new build
       is_required: true
   - distribute_external: "yes"
     opts:
       title: "Distribute External?"
-      description: |
+      description: |-
         Should the build be distributed to external testers?
       value_options: ["yes", "no"]
       is_required: true
   - groups: "Aan Zee"
     opts:
       title: "Groups"
-      summary: ""
+      description: |-
         Associate tester to one group or more by group name or
         group id.
       is_required: true
