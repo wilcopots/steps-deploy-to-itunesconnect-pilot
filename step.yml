@@ -166,22 +166,12 @@ inputs:
         - "ios"
         - "osx"
         - "appletvos"
-  - app_id: ""
-    opts:
-      title: "App Store Connect App ID"
-      summary: "App Store Connect App ID (Apple ID)"
-      description: |-
-        The app's *Apple ID* on App Store Connect.
-        **NOTE:** This input or the **App Bundle ID** is required.
-        Open the **app's page on App Store Connect**, click on **App Information**,
-        from the **General Information** section,
-        copy the **Apple ID**'s value from here. It's a numeric value, for example, 846814360.
   - bundle_id: ""
     opts:
       title: "App Bundle ID"
       description: |-
         The app's *Bundle ID* on App Store Connect.
-        **NOTE:** This input or the **App Store Connect App ID** is required.
+      is_required: true
   - pilot_action: ""
     opts:
       title: "Pilot action"

@@ -34,7 +34,6 @@ type Config struct {
 	APIKeyPath        stepconf.Secret `env:"api_key_path"`
 	APIIssuer         string          `env:"api_issuer"`
 
-	AppID              string `env:"app_id"`
 	BundleID           string `env:"bundle_id"`
 	PilotAction        string `env:"pilot_action,opt[upload,distribute]"`
 	SkipSubmission     string `env:"skip_submission,opt[yes,no]"`
@@ -254,8 +253,8 @@ func (cfg Config) validate() error {
 		return fmt.Errorf("PilotAction, %s", err)
 	}
 
-	if cfg.AppID == "" && cfg.BundleID == "" {
-		return fmt.Errorf("no AppID or BundleID parameter specified")
+	if cfg.BundleID == "" {
+		return fmt.Errorf("no BundleID parameter specified")
 	}
 
 	return nil
@@ -415,14 +414,7 @@ alphanumeric characters.`)
 		args = append(args, []string{arg.Key, arg.Value}...)
 	}
 
-	if cfg.AppID != "" {
-		args = append(args, "--app", cfg.AppID)
-
-		//warn user if BundleID is also set
-		if cfg.BundleID != "" {
-			log.Warnf("AppID parameter specified, BundleID will be ignored")
-		}
-	} else if cfg.BundleID != "" {
+	if cfg.BundleID != "" {
 		args = append(args, "--app_identifier", cfg.BundleID)
 	}
 
